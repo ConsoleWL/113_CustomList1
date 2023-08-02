@@ -16,9 +16,10 @@ namespace CustomList
         //Constructor
         public CustomList()
         {
-            //capacity = 
-            //count =
-            //items = 
+
+            count = 0;
+            capacity = 4;
+            items = new T[capacity];
         }
 
         //Member Methods (CAN DO)
