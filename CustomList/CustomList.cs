@@ -56,6 +56,18 @@ namespace CustomList
             }
         }
 
+        public T this[int index]
+        {
+            get
+            {
+                return items[index];
+            }
+            set
+            {
+                items[index] = value;
+            }
+        }
+
         public bool Remove(T item)
         {
             //If 'item' exists in the 'items' array, remove its first instance

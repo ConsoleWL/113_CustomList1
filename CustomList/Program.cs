@@ -18,7 +18,13 @@
 
             int t = 0;
 
-            Console.WriteLine(str.Count);
+            str[3] = "hahah";
+
+            Console.WriteLine(str[3]);
+
+            List<string> numbers = new List<string>();
+            
+            
         }
     }
 }
