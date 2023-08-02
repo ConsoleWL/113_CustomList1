@@ -56,6 +56,7 @@ namespace CustomList
             }
         }
 
+        // Indexers //how I would check a if(index <= 0 && index <= count)
         public T this[int index]
         {
             get
@@ -68,18 +69,35 @@ namespace CustomList
             }
         }
 
+                            //"hello5"
         public bool Remove(T item)
         {
-            //If 'item' exists in the 'items' array, remove its first instance
-            //Any items coming after the removed item should be shifted down so there is no empty index.
-            //If 'item' was removed, return true. If no item was removed, return false.
+            //for (int i = 0; i < count; i++)
+            //{
+            //    if (items[i] == item) 
+            //    {
+            //        items[i] == null;
+
+            //        // then we need to create a new array and shift everything in there after that index was removed
+
+            //    }
+            //}
+
             return false;
         }
+        //If 'item' exists in the 'items' array, remove its first instance
+        //Any items coming after the removed item should be shifted down so there is no empty index.
+        //If 'item' was removed, return true. If no item was removed, return false.
 
         public override string ToString()
         {
-            //returns a single string that contains all items from array
-            return "";
+            string listToString = "";
+
+            for (int i = 0; i < count; i++)
+            {
+                listToString += $"{items[i]}" + " ";
+            }
+            return listToString;
         }
 
         public static CustomList<T> operator +(CustomList<T> firstList, CustomList<T> secondList)
