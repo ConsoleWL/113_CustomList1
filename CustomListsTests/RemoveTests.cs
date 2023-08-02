@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace CustomListsTests
 {
     [TestClass]
-    public class Remove
+    public class RemoveTests
     {
         [TestMethod]
         public void Remove_CountDecremeantingWhenItemAdded_ReturnTrue()
@@ -28,7 +28,7 @@ namespace CustomListsTests
             countAfterRemove = names.Count;
 
             // Assert
-            Assert.IsFalse(countBeforeRemove > countAfterRemove);
+            Assert.IsTrue(countBeforeRemove > countAfterRemove);
         }
 
         [TestMethod]

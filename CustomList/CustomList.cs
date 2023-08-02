@@ -105,7 +105,7 @@ namespace CustomList
             //{
             //    listToString += $"{items[i]}" + " ";
             //}
-            return "";
+            return "test";
         }
 
         public static CustomList<T> operator +(CustomList<T> firstList, CustomList<T> secondList)
