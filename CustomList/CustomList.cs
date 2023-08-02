@@ -22,8 +22,8 @@ namespace CustomList
             items = new T[capacity];
         }
 
-        public int Capacity { get => capacity; set => capacity = value; }
-        public int Count { get => count; set => count = value; }
+        public int Capacity { get => capacity;}
+        public int Count { get => count;}
 
         //Member Methods (CAN DO)
         public void Add(T item)
@@ -55,9 +55,6 @@ namespace CustomList
                 }
             }
         }
-        //'item' parameter should be added to internal 'items' array
-        //if items array is at capacity, double capacity and create new array
-        //transfer all items to new array
 
         public bool Remove(T item)
         {
