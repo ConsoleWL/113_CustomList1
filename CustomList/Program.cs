@@ -1,6 +1,6 @@
 ﻿namespace CustomList
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -24,6 +24,7 @@
             Console.WriteLine(str.ToString());
 
             List<string> numbers = new List<string>();
+            
             
             
             

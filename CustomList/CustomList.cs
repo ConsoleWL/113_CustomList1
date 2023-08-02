@@ -28,32 +28,32 @@ namespace CustomList
         //Member Methods (CAN DO)
         public void Add(T item)
         {
-            int temp = 0;
-            while (true)
-            {
-                if (count == capacity)
-                {
-                    T[] itemsTemp = new T[capacity * 2];
-                    for (int i = 0; i < capacity; i++)
-                    {
-                        itemsTemp[i] = items[i];
-                    }
-                    capacity *= 2;
-                    items = itemsTemp;
-                    //items = new T[capacity * 2];
-                }
+            //int temp = 0;
+            //while (true)
+            //{
+            //    if (count == capacity)
+            //    {
+            //        T[] itemsTemp = new T[capacity * 2];
+            //        for (int i = 0; i < capacity; i++)
+            //        {
+            //            itemsTemp[i] = items[i];
+            //        }
+            //        capacity *= 2;
+            //        items = itemsTemp;
+            //        //items = new T[capacity * 2];
+            //    }
 
-                if (items[temp] == null)
-                {
-                    items[temp] = item;
-                    count++;
-                    break;
-                }
-                else
-                {
-                    temp++;
-                }
-            }
+            //    if (items[temp] == null)
+            //    {
+            //        items[temp] = item;
+            //        count++;
+            //        break;
+            //    }
+            //    else
+            //    {
+            //        temp++;
+            //    }
+            //}
         }
 
         // Indexers //how I would check a if(index <= 0 && index <= count)
@@ -74,7 +74,7 @@ namespace CustomList
         {
             //for (int i = 0; i < count; i++)
             //{
-            //    if (items[i] == item) 
+            //    if (items[i] == item)
             //    {
             //        items[i] == null;
 
@@ -85,23 +85,32 @@ namespace CustomList
 
             return false;
         }
-        //If 'item' exists in the 'items' array, remove its first instance
-        //Any items coming after the removed item should be shifted down so there is no empty index.
-        //If 'item' was removed, return true. If no item was removed, return false.
 
-        public override string ToString()
+        //for (int i = 0; i<count; i++)
+        //    {
+        //        if (items[i].ToString() == item.ToString())
+        //        {
+
+        //        }
+        //    }
+    //If 'item' exists in the 'items' array, remove its first instance
+    //Any items coming after the removed item should be shifted down so there is no empty index.
+    //If 'item' was removed, return true. If no item was removed, return false.
+
+    public override string ToString()
         {
-            string listToString = "";
+            //string listToString = "";
 
-            for (int i = 0; i < count; i++)
-            {
-                listToString += $"{items[i]}" + " ";
-            }
-            return listToString;
+            //for (int i = 0; i < count; i++)
+            //{
+            //    listToString += $"{items[i]}" + " ";
+            //}
+            return "";
         }
 
         public static CustomList<T> operator +(CustomList<T> firstList, CustomList<T> secondList)
         {
+
             //returns a single CustomList<T> that contains all items from firstList and all items from secondList 
             return null;
         }
