@@ -22,13 +22,42 @@ namespace CustomList
             items = new T[capacity];
         }
 
+        public int Capacity { get => capacity; set => capacity = value; }
+        public int Count { get => count; set => count = value; }
+
         //Member Methods (CAN DO)
         public void Add(T item)
         {
-            //'item' parameter should be added to internal 'items' array
-            //if items array is at capacity, double capacity and create new array
-            //transfer all items to new array
+            int temp = 0;
+            while (true)
+            {
+                if (count == capacity)
+                {
+                    T[] itemsTemp = new T[capacity * 2];
+                    for (int i = 0; i < capacity; i++)
+                    {
+                        itemsTemp[i] = items[i];
+                    }
+                    capacity *= 2;
+                    items = itemsTemp;
+                    //items = new T[capacity * 2];
+                }
+
+                if (items[temp] == null)
+                {
+                    items[temp] = item;
+                    count++;
+                    break;
+                }
+                else
+                {
+                    temp++;
+                }
+            }
         }
+        //'item' parameter should be added to internal 'items' array
+        //if items array is at capacity, double capacity and create new array
+        //transfer all items to new array
 
         public bool Remove(T item)
         {
