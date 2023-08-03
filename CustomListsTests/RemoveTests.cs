@@ -58,9 +58,10 @@ namespace CustomListsTests
 
             // Set
             names.Remove("Tom");
+            int countAfterRemoving = names.Count;
 
             // Assert
-            Assert.AreEqual(countBeforeRemoving, names.Count);
+            Assert.AreEqual(3, names.Count );
         }
 
         [TestMethod]
@@ -71,13 +72,12 @@ namespace CustomListsTests
             names.Add("Nikita");
             names.Add("Bob");
             names.Add("Tom");
-            string name = names[1];
 
             //Set
             names.Remove("Nikita");
 
             //Assert
-            Assert.AreEqual(name, names[0]);
+            Assert.AreEqual(names[1], "Tom");
         }
 
         [TestMethod]
